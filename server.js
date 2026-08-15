@@ -14,7 +14,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-const session = require('express-session');
 const SQLiteStore = require('connect-sqlite3')(session);
 
 app.use(session({

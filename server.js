@@ -14,7 +14,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
+const SQLiteStore = require('connect-sqlite3')(session);
+
 app.use(session({
+  store: new SQLiteStore({
+    db: 'sessions.sqlite',
+    dir: __dirname
+  }),
   secret: 'badminton-secret-key',
   resave: false,
   saveUninitialized: false,

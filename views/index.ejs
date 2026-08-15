@@ -6,10 +6,12 @@
   <title>스마트 배드민턴 매칭 & 랭킹</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-900 min-h-screen w-full m-0 flex items-center justify-center p-0 sm:p-4 font-sans">
+<body class="bg-slate-900 w-full min-h-screen m-0 p-0 font-sans flex flex-col">
 
-  <!-- 모바일 기기 프레임 컨테이너 -->
-  <div class="w-full max-w-3xl mx-auto bg-white sm:rounded-[40px] shadow-2xl overflow-hidden border border-gray-100 flex flex-col h-screen sm:h-[90vh] max-h-[900px] relative">
+  <!-- 화면 전체를 자동으로 꽉 채우는 컨테이너 -->
+  <div class="w-full min-h-screen bg-white flex flex-col relative">
+
+
 
     <% if (!currentUser || currentView === 'auth') { %>
       <!-- 1. 로그인 / 회원가입 화면 -->
